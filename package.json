@@ -1,0 +1,18 @@
+{
+  "author": "MinxterYT",
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "chalk": "^4.1.2",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.0.10"
+  },
+  "description": "A discordjs bot template",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "bot-template",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "version": "1.0.0"
+}
