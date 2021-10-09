@@ -2,7 +2,7 @@
 An easy to use bot template written using discordjs 13.
 
 # Setup
-Rename `template.env` to `.env` and fill out all values with correct working tokens.
+Rename `template.env` to `.env` and fill out all values with correct and functional tokens.
 Run `yarn install` and then `yarn run start`.
 
 # Deploy Commands 
