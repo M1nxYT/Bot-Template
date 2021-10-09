@@ -14,4 +14,4 @@ View the ping command for extensive notes about command properties.
 The reload command also demonstrates how to go about making hidden commands.
 
 # Adding commands to help
-In the help command I have commented code for a misc category, use this to create other categories. (note: commands categories have to match this (case-sensitive) to appear in said category.)
+In the help command I have commented code for a misc category, use this to create other categories. Note: commands categories have to match this (case-sensitive) to appear in said category.
