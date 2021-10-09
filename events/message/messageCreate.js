@@ -1,8 +1,7 @@
-const permCheck = require("../utils/checkpermission");
+const permCheck = require("../../utils/checkpermission");
 
 module.exports = {
     name: 'messageCreate',
-    once: true,
     execute: async function (message, client) {
         if (message.author.bot) return;
         if (!message.content.startsWith(client.prefix)) return;
@@ -15,7 +14,12 @@ module.exports = {
         else {
             let cmd = client.commands.get(commandName)
             if (!permCheck(message.member, cmd.perms)) {
-                return message.reply(`To run this command you need the following permissions:\n \`${cmd.perms.join('` `')}` + '`');
+                if(cmd.hidden){
+                    return message.reply(`Command not found!`);
+                }
+                else{
+                    return message.reply(`To run this command you need the following permissions:\n \`${cmd.perms.join('` `')}` + '`');
+                }
             }
             else{
                 await cmd.prefixExecute(client, message)
