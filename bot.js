@@ -5,6 +5,7 @@ const client = new Client({
 });
 const fs = require('fs');
 const chalk = require('chalk');
+const success = chalk.bold.green;
 const error = chalk.bold.red;
 const verifyenv = require('./utils/verifyenv')
 require('dotenv').config()
@@ -15,7 +16,6 @@ if(verifyenv().length > 0){
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env['MONGO_URL']);
-
 client.commands = new Collection();
 client.events = new Collection();
 client.models = new Collection();
